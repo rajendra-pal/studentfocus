@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>StudentFocus - Learning Tracker</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            colors: {
+              bg: {
+                primary: 'var(--bg-primary)',
+                secondary: 'var(--bg-secondary)',
+                card: 'var(--card-bg)',
+                input: 'var(--input-bg)',
+                hover: 'var(--bg-hover)',
+              },
+              text: {
+                primary: 'var(--text-primary)',
+                secondary: 'var(--text-secondary)',
+                inverse: 'var(--text-inverse)',
+              },
+              border: {
+                DEFAULT: 'var(--border-color)',
+              },
+              accent: {
+                primary: 'var(--accent-primary)',
+                hover: 'var(--accent-hover)',
+                secondary: 'var(--accent-secondary)',
+              }
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      :root {
+        /* Light Mode Palette - Clean & Bright */
+        --bg-primary: #f8fafc;   /* Slate 50 */
+        --bg-secondary: #ffffff; /* White */
+        --card-bg: #ffffff;      /* White */
+        --input-bg: #f1f5f9;     /* Slate 100 */
+        --bg-hover: #f1f5f9;     /* Slate 100 */
+        
+        --text-primary: #0f172a;   /* Slate 900 */
+        --text-secondary: #64748b; /* Slate 500 */
+        --text-inverse: #ffffff;
+        
+        --border-color: #e2e8f0;   /* Slate 200 */
+        
+        --accent-primary: #2563eb; /* Blue 600 */
+        --accent-hover: #1d4ed8;   /* Blue 700 */
+        --accent-secondary: #22c55e; /* Green 500 */
+      }
+
+      .dark {
+        /* Dark Mode Palette - Refined Slate Theme (Not too dark) */
+        --bg-primary: #0f172a;   /* Slate 900 - Rich dark blue/gray */
+        --bg-secondary: #1e293b; /* Slate 800 - Lighter than bg for contrast */
+        --card-bg: #1e293b;      /* Slate 800 */
+        --input-bg: #334155;     /* Slate 700 */
+        --bg-hover: #334155;     /* Slate 700 */
+        
+        --text-primary: #f8fafc;   /* Slate 50 */
+        --text-secondary: #94a3b8; /* Slate 400 */
+        --text-inverse: #ffffff;
+        
+        --border-color: #334155;   /* Slate 700 */
+        
+        --accent-primary: #3b82f6; /* Blue 500 */
+        --accent-hover: #2563eb;   /* Blue 600 */
+        --accent-secondary: #22c55e; /* Green 500 */
+      }
+
+      /* Custom scrollbar */
+      ::-webkit-scrollbar {
+        width: 8px;
+        height: 8px;
+      }
+      ::-webkit-scrollbar-track {
+        background: transparent; 
+      }
+      ::-webkit-scrollbar-thumb {
+        background: var(--border-color); 
+        border-radius: 4px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: var(--text-secondary); 
+      }
+
+      /* Safe Area Utilities for Mobile */
+      .pb-safe {
+        padding-bottom: env(safe-area-inset-bottom, 20px);
+      }
+      .pt-safe {
+        padding-top: env(safe-area-inset-top, 0px);
+      }
+      
+      body {
+        background-color: var(--bg-primary);
+        color: var(--text-primary);
+        transition: background-color 0.3s, color 0.3s;
+        /* Prevent bounce effect on iOS */
+        overscroll-behavior-y: none;
+      }
+    </style>
+<script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react@^19.2.3",
+    "react-dom/client": "https://esm.sh/react-dom@^19.2.3/client",
+    "react-dom": "https://esm.sh/react-dom@^19.2.3",
+    "lucide-react": "https://esm.sh/lucide-react@^0.562.0",
+    "recharts": "https://esm.sh/recharts@^3.6.0",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+    "react/": "https://esm.sh/react@^19.2.3/"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+<body class="bg-bg-primary text-text-primary font-sans antialiased">
+    <div id="root"></div>
+<script type="module" src="/index.tsx"></script>
+</body>
+</html>
