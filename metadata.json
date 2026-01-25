@@ -1,0 +1,7 @@
+{
+  "name": "StudentFocus",
+  "description": "A comprehensive personal learning tracker for students tracking goals, schedule, and consistency offline.",
+  "requestFramePermissions": [
+    "microphone"
+  ]
+}
